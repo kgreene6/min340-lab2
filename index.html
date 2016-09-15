@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <title>Season Personality Test!
+    </title>
+    
+    <head> 
+    </head>
+    <style>
+    #button01{
+        color: green;
+        }
+    #button02{
+        color: green;
+        }
+    </style>
+    <body>
+        <div id="Kierstin">Hello!</div>
+        <input id="input" type="text" placeholder="enter your name" />
+        <button id="button01">enter</button>
+        <p id="output"></p>
+       
+        <div id="intro">Welcome to Kierstin's MIN340 Personality Test for fun! This will just be a simple and fun test to see what type of person you are.  By choosing your favorite season, you will find out your type of personality.<br>
+            
+            Do you want to try? <button id="button02">Yes</button>
+        </div>
+        
+        <div id="choices">
+<span id="Question">Pick your favorite color</span><br>
+            
+        <span class="fakeButton" id="answer01"> Fall </span><br>   
+        <span class="fakeButton" id="answer02"> Winter </span><br>
+        <span class="fakeButton" id="answer03"> Spring </span><br>
+        <span class="fakeButton" id="answer04"> Summer </span><br>
+		</div>
+        
+		<div id="personality01"> Since Fall is your favorite season, you are a more introverted person.  Yes, you can have little spurts of being extroverted but you will always be most happy doing your hobbies alone and without distraction.</div>
+        <div id="personality02"> Since Winter is your favorite season then you are a family person.  Winter holds all of the heart warming, family time.  You are also someone that like the quiet like on a winter night that has a blanket of snow.</div>
+		<div id="personality03">Since Spring is your favorite season then you are a very energetic person.  Winter makes you crave the warmth of the sun and as soon as the temperatures rise, you are the first to head outside.  You enjoy being around friends and always having something to do.</div>
+		<div id="personality04"> Since Summer is your favorite season then you are a laid back person.  You like to take time to relax and enjoy the warm summer days.  You like to take your time with tasks and not rush anything.  </div>
+    </body>
+    <script>
+	 var button = document.querySelector("#button01");
+            button.addEventListener("click", clickHandler, false);
+            button.style.cursor = "pointer";
+            
+            function clickHandler()
+            {
+                var input = document.querySelector("#input");
+                var output = document.querySelector("#output");
+                output.innerHTML = input.value;
+            }
+          var option = document.querySelector("#choices");
+		  option.style.display = "none";
+         var button2 = document.querySelector("#button02");
+         button2.addEventListener("click", clickHandler2, false);
+         function clickHandler2()
+         {
+             console.log("Button Clicked");
+			 option.style.display = "block"; 
+         }
+		 
+     
+    var answer1 = document.querySelector("#answer01");
+    answer1.style.display = "block";
+    var answer2 = document.querySelector("#answer02");
+    answer2.style.display = "block";
+	 var answer3 = document.querySelector("#answer03");
+    answer3.style.display = "block";
+	 var answer4 = document.querySelector("#answer04");
+    answer4.style.display = "block";
+	
+	var personality01 = document.querySelector("#personality01");
+	personality01.style.display = "none";
+	var personality02 = document.querySelector("#personality02");
+	personality02.style.display = "none";
+	var personality03 = document.querySelector("#personality03");
+	personality03.style.display = "none";
+	var personality04 = document.querySelector("#personality04");
+	personality04.style.display = "none";
+	
+	answer1.addEventListener("click", clickHandlerP1, false);
+	answer2.addEventListener("click", clickHandlerP2, false);
+	answer3.addEventListener("click", clickHandlerP3, false);
+	answer4.addEventListener("click", clickHandlerP4, false);
+	
+    function clickHandlerP1 () {
+        Question.style.display = "none";
+        answer01.style.display = "block";
+        answer02.style.display = "none";
+        answer03.style.display = "none";
+        answer04.style.display = "none";
+        
+		personality01.style.display = "Block";
+		personality02.style.display = "none";
+		personality03.style.display = "none";
+		personality04.style.display = "none";
+    }
+    
+    function clickHandlerP2 () {
+        Question.style.display = "none";
+        answer01.style.display = "none";
+        answer02.style.display = "block";
+        answer03.style.display = "none";
+        answer04.style.display = "none";
+        
+		personality01.style.display = "none";
+		personality02.style.display = "block";
+		personality03.style.display = "none";
+		personality04.style.display = "none";
+    }    
+    
+    function clickHandlerP3 () {
+        Question.style.display = "none";
+        answer01.style.display = "none";
+        answer02.style.display = "none";
+        answer03.style.display = "block";
+        answer04.style.display = "none";
+        
+		personality01.style.display = "none";
+		personality02.style.display = "none";
+		personality03.style.display = "block";
+		personality04.style.display = "none";
+    }
+       
+    function clickHandlerP4 () {
+        Question.style.display = "none";
+        answer01.style.display = "none";
+        answer02.style.display = "none";
+        answer03.style.display = "none";
+        answer04.style.display = "block";
+        
+		personality01.style.display = "none";
+		personality02.style.display = "none";
+		personality03.style.display = "none";
+		personality04.style.display = "block";
+    }
+           
+        </script> 
+</html>
